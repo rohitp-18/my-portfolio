@@ -52,7 +52,7 @@ function Home({ visibleSections }: { visibleSections: Set<string> }) {
       id="home"
       className="h-screen min-h-[700px] max-h-[900px] py-14 w-full bg-gradient-to-br flex justify-center items-center from-gray-950 via-slate-950 to-black relative"
     >
-      <div className="flex flex-col w-full lg:flex-row items-center justify-center min-h-screen relative px-4 sm:px-6 md:px-8 lg:px-16 xl:px-20 z-50 py-8 lg:py-16 gap-8 lg:gap-12 max-w-7xl mx-auto">
+      <div className="flex flex-col w-full lg:flex-row items-center min-h-screen relative px-4 z-50 py-8 lg:py-16 gap-8 lg:gap-12 max-w-7xl mx-auto">
         <div
           className={`w-full lg:max-w-2xl text-center lg:text-left lg:flex-1 order-2 lg:order-1 transition-all duration-1000 ${
             visibleSections.has("home")
@@ -103,9 +103,10 @@ function Home({ visibleSections }: { visibleSections: Set<string> }) {
                 : "opacity-0 translate-y-4"
             }`}
           >
-            Specializing in building robust, scalable web applications with
-            modern technologies. Delivering high-quality solutions that drive
-            business growth and exceptional user experiences.
+            With over 3 years of hands-on project experience, I have worked
+            extensively with modern technologies to build robust, scalable web
+            applications. I am passionate about delivering high-quality
+            solutions that create exceptional user experiences.
           </div>
           <div
             className={`flex flex-col sm:flex-row w-full gap-3 lg:gap-4 justify-center lg:justify-start items-center mt-6 lg:mt-8 transition-all duration-700 delay-1000 ${

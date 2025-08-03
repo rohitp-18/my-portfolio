@@ -1,16 +1,18 @@
 import { IconBrandWhatsapp } from "@tabler/icons-react";
 import React from "react";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
+import { useContactForm } from "../../hooks/useContactForm";
 
 function Contact({ visibleSections }: { visibleSections: Set<string> }) {
+  const { formData, formState, updateField, submitForm } = useContactForm();
   return (
     <section
       id="contact"
-      className={`w-full min-h-screen py-8 md:py-14 bg-gradient-to-br from-slate-950 via-gray-950 to-slate-900 relative transition-all duration-1000 ${
+      className={`w-full min-h-min max-h-max h-screen py-8 md:py-14 bg-gradient-to-br from-slate-950 via-gray-950 to-slate-900 relative transition-all duration-1000 ${
         visibleSections.has("contact") ? "opacity-100" : "opacity-50"
       }`}
     >
-      <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between h-full relative px-4 sm:px-8 lg:px-16 z-50 gap-8 lg:gap-0">
+      <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between h-full relative px-4 sm:px-8 lg:px-16 z-50 gap-8 lg:gap-10">
         <div
           className={`w-full lg:max-w-xl transition-all duration-1000 delay-200 ${
             visibleSections.has("contact")
@@ -64,7 +66,7 @@ function Contact({ visibleSections }: { visibleSections: Set<string> }) {
           >
             {/* Direct Contact */}
             <div
-              className={`direct-contact overflow-x-hidden transition-all duration-700 delay-500 ${
+              className={`direct-contact overflow-hidden transition-all duration-700 delay-500 ${
                 visibleSections.has("contact")
                   ? "animate-slide-left opacity-100"
                   : "opacity-0 -translate-x-10"
@@ -198,7 +200,7 @@ function Contact({ visibleSections }: { visibleSections: Set<string> }) {
                   {
                     name: "Instagram",
                     desc: "Behind Scenes",
-                    href: "https://instagram.com/rohit.codes",
+                    href: "https://www.instagram.com/rohit_p.18/",
                     color: "pink",
                     delay: "300",
                   },
@@ -232,7 +234,7 @@ function Contact({ visibleSections }: { visibleSections: Set<string> }) {
             >
               <h3 className="text-lg md:text-xl font-semibold text-cyan-400 mb-4 flex items-center gap-2">
                 <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse"></div>
-                Services Available
+                What I Can Help With
               </h3>
               <div className="space-y-3">
                 {[
@@ -327,7 +329,24 @@ function Contact({ visibleSections }: { visibleSections: Set<string> }) {
                 </p>
               </div>
 
-              <form className="space-y-4">
+              <form onSubmit={submitForm} className="space-y-4">
+                {/* Success/Error Messages */}
+                {formState.isSuccess && (
+                  <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-3 animate-fade-in">
+                    <p className="text-green-400 text-sm text-center">
+                      ✅ Thank you! Your message has been sent successfully.
+                    </p>
+                  </div>
+                )}
+
+                {formState.error && (
+                  <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-3 animate-fade-in">
+                    <p className="text-red-400 text-sm text-center">
+                      ❌ {formState.error}
+                    </p>
+                  </div>
+                )}
+
                 {/* Name Field */}
                 <div className="group animate-fade-in-up delay-200">
                   <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -336,6 +355,9 @@ function Contact({ visibleSections }: { visibleSections: Set<string> }) {
                   <input
                     type="text"
                     placeholder="Enter your name"
+                    value={formData.name}
+                    onChange={(e) => updateField("name", e.target.value)}
+                    required
                     className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400/60 focus:ring-2 focus:ring-blue-400/20 transition-all duration-300 group-hover:border-gray-500/70 focus:scale-[1.02]"
                   />
                 </div>
@@ -348,6 +370,9 @@ function Contact({ visibleSections }: { visibleSections: Set<string> }) {
                   <input
                     type="email"
                     placeholder="your.email@example.com"
+                    value={formData.email}
+                    onChange={(e) => updateField("email", e.target.value)}
+                    required
                     className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400/60 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300 group-hover:border-gray-500/70 focus:scale-[1.02]"
                   />
                 </div>
@@ -357,12 +382,60 @@ function Contact({ visibleSections }: { visibleSections: Set<string> }) {
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Subject
                   </label>
-                  <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-lg text-white focus:outline-none focus:border-cyan-400/60 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300 group-hover:border-gray-500/70 focus:scale-[1.02]">
-                    <option value="">Select a topic</option>
-                    <option value="project">New Project</option>
-                    <option value="consultation">Consultation</option>
-                    <option value="collaboration">Collaboration</option>
-                    <option value="other">Other</option>
+                  <select
+                    value={formData.subject}
+                    onChange={(e) => updateField("subject", e.target.value)}
+                    required
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/60 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300 group-hover:border-gray-500/70 focus:scale-[1.02] appearance-none cursor-pointer"
+                    style={{
+                      backgroundImage: `url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e")`,
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "right 12px center",
+                      backgroundSize: "16px",
+                    }}
+                  >
+                    <option value="" className="bg-gray-800 text-gray-400">
+                      Select a topic...
+                    </option>
+                    <option value="project" className="bg-gray-800 text-white">
+                      💼 New Project
+                    </option>
+                    <option
+                      value="freelance"
+                      className="bg-gray-800 text-white"
+                    >
+                      🚀 Freelance Work
+                    </option>
+                    <option
+                      value="collaboration"
+                      className="bg-gray-800 text-white"
+                    >
+                      🤝 Collaboration
+                    </option>
+                    <option
+                      value="consultation"
+                      className="bg-gray-800 text-white"
+                    >
+                      💡 Technical Consultation
+                    </option>
+                    <option
+                      value="mentorship"
+                      className="bg-gray-800 text-white"
+                    >
+                      📚 Mentorship
+                    </option>
+                    <option value="feedback" className="bg-gray-800 text-white">
+                      💬 Portfolio Feedback
+                    </option>
+                    <option
+                      value="opportunity"
+                      className="bg-gray-800 text-white"
+                    >
+                      🎯 Job Opportunity
+                    </option>
+                    <option value="other" className="bg-gray-800 text-white">
+                      ✨ Other
+                    </option>
                   </select>
                 </div>
 
@@ -374,6 +447,9 @@ function Contact({ visibleSections }: { visibleSections: Set<string> }) {
                   <textarea
                     rows={4}
                     placeholder="Tell me about your project..."
+                    value={formData.message}
+                    onChange={(e) => updateField("message", e.target.value)}
+                    required
                     className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400/60 focus:ring-2 focus:ring-green-400/20 transition-all duration-300 resize-none group-hover:border-gray-500/70 focus:scale-[1.02]"
                   ></textarea>
                 </div>
@@ -381,23 +457,51 @@ function Contact({ visibleSections }: { visibleSections: Set<string> }) {
                 {/* Submit Button */}
                 <button
                   type="submit"
+                  disabled={formState.isSubmitting}
                   className="w-full bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 hover:from-blue-600 hover:via-purple-600 hover:to-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-500/25 focus:outline-none focus:ring-2 focus:ring-purple-400/50 disabled:opacity-50 disabled:cursor-not-allowed group animate-fade-in-up delay-600"
                 >
                   <span className="flex items-center justify-center gap-2">
-                    <svg
-                      className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-                      />
-                    </svg>
-                    Send Message
+                    {formState.isSubmitting ? (
+                      <>
+                        <svg
+                          className="w-4 h-4 animate-spin"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <circle
+                            className="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            strokeWidth="4"
+                          />
+                          <path
+                            className="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                          />
+                        </svg>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <svg
+                          className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                          />
+                        </svg>
+                        Send Message
+                      </>
+                    )}
                   </span>
                 </button>
               </form>

@@ -5,7 +5,7 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
   return (
     <section
       id="projects"
-      className={`w-full min-h-screen py-14 bg-gradient-to-br from-gray-950 via-slate-950 to-gray-900 relative transition-all duration-1000 ${
+      className={`w-full min-h-min max-h-max h-screen py-14 bg-gradient-to-br from-gray-950 via-slate-950 to-gray-900 relative transition-all duration-1000 ${
         visibleSections.has("projects") ? "opacity-100" : "opacity-0"
       }`}
     >
@@ -47,7 +47,7 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
             <div className="space-y-6 lg:space-y-8 w-full lg:w-2/3">
               {/* Project Categories */}
               <div
-                className={`project-categories ${
+                className={`overflow-hidden ${
                   visibleSections.has("projects") ? "animate-slide-left" : ""
                 }`}
                 style={{ "--stagger-delay": "4" } as React.CSSProperties}
@@ -56,14 +56,14 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                   <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
                   Project Categories
                 </h3>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-3 stagger-children">
+                <div className="grid grid-cols-2 md:grid-cols-3 overflow-hidden gap-3 stagger-children min-w-0">
                   {[
-                    { name: "Web Applications", count: "8+" },
-                    { name: "E-Commerce Sites", count: "3+" },
-                    { name: "Mobile Apps", count: "2+" },
+                    { name: "Web Applications", count: "6+" },
+                    { name: "E-Commerce Sites", count: "1+" },
+                    { name: "Mobile Apps", count: "1+" },
+                    { name: "Dashboard UIs", count: "2+" },
                     { name: "API Development", count: "5+" },
-                    { name: "Dashboard UIs", count: "4+" },
-                    { name: "Landing Pages", count: "6+" },
+                    { name: "Deployment", count: "3+" },
                   ].map((category, index) => (
                     <div
                       key={index}
@@ -147,8 +147,8 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                         Production Deployment
                       </h4>
                       <p className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                        Deployed applications with CI/CD pipelines and cloud
-                        hosting solutions
+                        Live applications with automated deployment and scalable
+                        infrastructure
                       </p>
                     </div>
                   </div>
@@ -191,7 +191,7 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                             }`}
                           >
                             <div className="text-2xl font-bold text-white mb-1 animate-bounce-slow">
-                              15+
+                              9+
                             </div>
                             <div className="text-sm text-gray-400">
                               Projects

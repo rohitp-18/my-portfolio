@@ -61,7 +61,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="dark:bg-red text-foreground scroll-smooth overflow-x-hidden">
+      <body className="bg-gradient-to-br from-slate-600 via-gray-600 to-slate-700 text-foreground scroll-smooth overflow-x-hidden">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

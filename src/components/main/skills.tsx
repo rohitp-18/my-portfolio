@@ -5,7 +5,7 @@ function Skills({ visibleSections }: { visibleSections: Set<string> }) {
   return (
     <section
       id="skills"
-      className={`w-full min-h-screen py-14 bg-gradient-to-br from-gray-950 via-slate-950 to-gray-900 relative transition-all duration-1000 ${
+      className={`w-full min-h-[990px] max-h-[1100px] h-screen py-14 bg-gradient-to-br from-gray-950 via-slate-950 to-gray-900 relative transition-all duration-1000 ${
         visibleSections.has("skills") ? "opacity-100" : "opacity-30"
       }`}
     >
@@ -198,7 +198,7 @@ function Skills({ visibleSections }: { visibleSections: Set<string> }) {
                   "VS Code",
                   "Postman",
                   "Docker",
-                  "AWS",
+                  "ShadCN",
                   "Vercel",
                   "Tailwind CSS",
                   "Bootstrap",

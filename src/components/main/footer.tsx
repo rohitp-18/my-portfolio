@@ -189,8 +189,8 @@ function Footer({ scrollProgress }: { scrollProgress: any }) {
               </div>
             </div>
 
-            {/* Quick Links */}
             <div className="col-span-2 gap-2 flex w-full justify-between md:justify-around px-4 sm:px-0">
+              {/* Quick Links */}
               <div className="col-span-1">
                 <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm">
                   Quick Links
@@ -275,7 +275,7 @@ function Footer({ scrollProgress }: { scrollProgress: any }) {
                   </li>
                   <li>
                     <span className="text-gray-400 text-xs sm:text-sm">
-                      Consultation
+                      Performance Optimization
                     </span>
                   </li>
                   <li>
@@ -303,7 +303,7 @@ function Footer({ scrollProgress }: { scrollProgress: any }) {
                 "TypeScript",
                 "Tailwind CSS",
                 "JavaScript",
-                "PostgreSQL",
+                "Pinecone",
                 "Git",
               ].map((tech) => (
                 <span
@@ -320,27 +320,27 @@ function Footer({ scrollProgress }: { scrollProgress: any }) {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
             <div className="text-center">
               <div className="text-base sm:text-lg font-bold text-blue-400">
-                2+
+                3+
               </div>
               <div className="text-xs text-gray-400">Years Experience</div>
             </div>
             <div className="text-center">
               <div className="text-base sm:text-lg font-bold text-purple-400">
-                15+
+                10+
               </div>
               <div className="text-xs text-gray-400">Projects Completed</div>
             </div>
             <div className="text-center">
               <div className="text-base sm:text-lg font-bold text-cyan-400">
-                10+
+                5+
               </div>
               <div className="text-xs text-gray-400">Technologies</div>
             </div>
             <div className="text-center">
-              <div className="text-base sm:text-lg font-bold text-green-400">
-                100%
+              <div className="text-base sm:text-lg font-bold text-orange-400">
+                24/7
               </div>
-              <div className="text-xs text-gray-400">Client Satisfaction</div>
+              <div className="text-xs text-gray-400">Support Available</div>
             </div>
           </div>
 

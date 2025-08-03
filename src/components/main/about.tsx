@@ -5,11 +5,11 @@ function About({ visibleSections }: { visibleSections: Set<string> }) {
   return (
     <section
       id="about"
-      className={`w-full min-h-screen py-14 bg-gradient-to-br from-slate-950 via-gray-950 to-slate-900 relative transition-all duration-1000 ${
+      className={`w-full min-h-[910px] h-screen max-h-[1000px] py-14 bg-gradient-to-br from-slate-950 via-gray-950 to-slate-900 relative transition-all duration-1000 ${
         visibleSections.has("about") ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="flex items-center justify-center lg:justify-between h-full flex-row-reverse relative px-8 lg:px-16 z-50">
+      <div className="flex items-center justify-center lg:justify-between h-full gap-8 flex-row-reverse relative px-8 lg:px-16 z-50">
         <div
           className={`max-w-2xl transition-all duration-1000 delay-200 ${
             visibleSections.has("about")
@@ -33,9 +33,9 @@ function About({ visibleSections }: { visibleSections: Set<string> }) {
                 : "opacity-0 translate-y-5"
             }`}
           >
-            Passionate{" "}
+            Full Stack{" "}
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Developer
+              Project Developer
             </span>
           </div>
 
@@ -46,10 +46,12 @@ function About({ visibleSections }: { visibleSections: Set<string> }) {
                 : "opacity-0 translate-y-5"
             }`}
           >
-            I'm a dedicated MERN Stack Developer with expertise in building
-            modern, responsive web applications. With a strong foundation in
-            JavaScript, React, Node.js, and MongoDB, I create seamless user
-            experiences and robust backend solutions.
+            Over the past 3 years, I've immersed myself in web development
+            through hands-on project experience, specializing in building and
+            deploying large-scale applications. With a strong foundation in the
+            MERN stack (MongoDB, Express.js, React.js, Node.js), I've
+            successfully developed and launched multiple full-stack applications
+            from concept to deployment.
           </div>
 
           <div
@@ -105,19 +107,19 @@ function About({ visibleSections }: { visibleSections: Set<string> }) {
                 {
                   title: "Full Stack Development",
                   description:
-                    "End-to-end web application development with modern technologies",
+                    "Building and deploying complete web applications from concept to launch",
                   color: "blue",
                 },
                 {
-                  title: "Frontend Excellence",
+                  title: "Modern Web Applications",
                   description:
-                    "Creating responsive, interactive user interfaces with React & Next.js",
+                    "Creating responsive applications using React, Next.js, and modern frameworks",
                   color: "purple",
                 },
                 {
-                  title: "Backend Solutions",
+                  title: "Project Architecture",
                   description:
-                    "Building scalable APIs and database architectures",
+                    "Designing and implementing scalable application structures and APIs",
                   color: "cyan",
                 },
               ].map((item, index) => (

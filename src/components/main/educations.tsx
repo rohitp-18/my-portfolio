@@ -5,11 +5,11 @@ function Educations({ visibleSections }: { visibleSections: Set<string> }) {
   return (
     <section
       id="education"
-      className={`w-full min-h-screen py-8 md:py-14 bg-gradient-to-br from-slate-950 via-gray-950 to-slate-900 relative transition-all duration-1000 ${
+      className={`w-full min-h-min max-h-max h-screen py-8 md:py-14 bg-gradient-to-br from-slate-950 via-gray-950 to-slate-900 relative transition-all duration-1000 ${
         visibleSections.has("education") ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="flex flex-col lg:flex-row-reverse lg:justify-between items-center h-full relative px-4 sm:px-8 lg:px-16 z-50">
+      <div className="flex flex-col lg:flex-row-reverse lg:justify-between gap-5 items-center h-full relative px-4 sm:px-8 lg:px-16 z-50">
         <div
           className={`w-full lg:max-w-2xl transition-all duration-1000 delay-200 ${
             visibleSections.has("education")
@@ -46,10 +46,9 @@ function Educations({ visibleSections }: { visibleSections: Set<string> }) {
                 : "opacity-0 translate-y-8"
             }`}
           >
-            Strong educational foundation in computer science and continuous
-            learning through certifications and practical projects. Committed to
-            staying updated with the latest technologies and industry best
-            practices.
+            Strong academic foundation in computer science and continuous
+            learning through practical projects. Committed to staying updated
+            with the latest technologies and industry best practices.
           </div>
 
           <div
@@ -86,14 +85,14 @@ function Educations({ visibleSections }: { visibleSections: Set<string> }) {
                 >
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-1 sm:gap-0">
                     <h4 className="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
-                      Bachelor's in Computer Science
+                      B.Sc in Computer Science
                     </h4>
                     <span className="text-xs text-blue-400 font-medium">
-                      2020 - 2024
+                      2023 - 2026
                     </span>
                   </div>
                   <p className="text-xs text-gray-400 mb-2 group-hover:text-gray-300 transition-colors duration-300">
-                    University/College Name
+                    Solapur University, Solapur
                   </p>
                   <p className="text-xs text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
                     Comprehensive study of computer science fundamentals, data
@@ -118,16 +117,13 @@ function Educations({ visibleSections }: { visibleSections: Set<string> }) {
                       Higher Secondary Education
                     </h4>
                     <span className="text-xs text-purple-400 font-medium">
-                      2018 - 2020
+                      2021 - 2023
                     </span>
                   </div>
                   <p className="text-xs text-gray-400 mb-2 group-hover:text-gray-300 transition-colors duration-300">
-                    School/College Name
+                    SGRGS Mahavidyalay Paranda
                   </p>
-                  <p className="text-xs text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
-                    Mathematics, Physics, and Computer Science with focus on
-                    programming fundamentals and logical thinking.
-                  </p>
+                  <p className="text-xs text-gray-300 group-hover:text-gray-200 transition-colors duration-300"></p>
                 </div>
               </div>
             </div>
@@ -275,7 +271,7 @@ function Educations({ visibleSections }: { visibleSections: Set<string> }) {
 
         {/* Education Stats/Visual - Hidden on mobile and tablet */}
         <div
-          className={`hidden xl:flex w-full h-full items-center justify-center relative max-w-md transition-all duration-1000 delay-400 ${
+          className={`hidden lg:flex w-full h-full items-center justify-center relative max-w-md transition-all duration-1000 delay-400 ${
             visibleSections.has("education")
               ? "opacity-100 scale-100"
               : "opacity-0 scale-90"

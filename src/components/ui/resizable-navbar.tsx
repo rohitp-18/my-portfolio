@@ -92,7 +92,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         boxShadow: visible
           ? "0 0 32px rgba(59, 130, 246, 0.15), 0 0 64px rgba(147, 51, 234, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)"
           : "0 0 24px rgba(59, 130, 246, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
-        width: visible ? "45%" : "100%",
+        width: visible ? "45%" : "calc(100%-40px)",
         y: visible ? 15 : 0,
         scale: visible ? 0.98 : 1,
         borderColor: visible
@@ -108,7 +108,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         minWidth: "850px",
       }}
       className={cn(
-        "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-2xl bg-gray-950/90 backdrop-blur-md border border-blue-500/30 px-6 py-3 lg:flex",
+        "relative z-[60] mx-auto hidden w-[calc(100%-40px)] max-w-7xl flex-row items-center justify-between self-start rounded-2xl bg-gray-950/90 backdrop-blur-md border border-blue-500/30 px-6 py-3 lg:flex",
         "shadow-2xl shadow-blue-500/20",
         "before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-r before:from-blue-500/5 before:via-purple-500/5 before:to-cyan-500/5 before:opacity-50",
         visible && [

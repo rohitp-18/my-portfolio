@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import Spotlight from "@/components/main/spotlight";
 import Loader from "@/components/main/loader";
 import Contact from "@/components/main/contact";
