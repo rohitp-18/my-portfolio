@@ -52,6 +52,10 @@ export const metadata: Metadata = {
     "Web Development Experience",
     "Web Development Career",
   ],
+  icons: {
+    icon: "./favicon.ico",
+    shortcut: "./favicon.ico",
+  },
 };
 
 export default function RootLayout({
