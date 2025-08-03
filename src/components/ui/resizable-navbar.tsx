@@ -415,7 +415,7 @@ export const NavbarLogo = () => {
         <Avatar className="ring-2 ring-blue-500/30 group-hover:ring-blue-400/50 transition-all duration-300">
           <AvatarImage
             src={
-              "https://res.cloudinary.com/rdisexc23ed/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1719936876/Portfolio/about/avatar/nkp5hck2p22a4fds9g2j.jpg"
+              "https://res.cloudinary.com/rdisexc23ed/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1719936876/Portfolio/about/avatar/nkp5hck2p22a4fds9g2j.jpg"
             }
             loading="lazy"
             alt="Rohit Patil"

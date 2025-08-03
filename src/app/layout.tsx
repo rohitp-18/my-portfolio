@@ -53,8 +53,9 @@ export const metadata: Metadata = {
     "Web Development Career",
   ],
   icons: {
-    icon: "./favicon.ico",
-    shortcut: "./favicon.ico",
+    icon: "https://res.cloudinary.com/rdisexc23ed/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1719936876/Portfolio/about/avatar/nkp5hck2p22a4fds9g2j.jpg",
+    shortcut:
+      "https://res.cloudinary.com/rdisexc23ed/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1719936876/Portfolio/about/avatar/nkp5hck2p22a4fds9g2j.jpg",
   },
 };
 
