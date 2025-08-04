@@ -145,7 +145,7 @@ function NavbarDemo() {
                 <span className="font-medium">Contact Me</span>
               </a>
               <a
-                href="https://drive.google.com/file/d/1x7CPYb1J0wlcJ9E6fqwJz3EmZVWKeeSo/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1GLDpmNMcONF3amydwF0jA7hOX-RjiRD4/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-purple-300 hover:text-purple-400 transition-colors duration-200 py-2 px-4 rounded-lg hover:bg-purple-500/10"
