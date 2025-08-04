@@ -319,8 +319,8 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                   title: "E-Commerce Platform",
                   stack: "MERN Stack",
                   description:
-                    "Full-featured online shopping platform with user authentication, payment integration, admin dashboard, and real-time inventory management.",
-                  technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+                    "E-commerce platform with user authentication, dashboards for admin and sellers, and inventory management. Built for real-world deployment.",
+                  technologies: ["React", "Node.js", "MongoDB", "SCSS"],
                   gradient: "from-blue-500/10 to-purple-500/10",
                   border: "border-blue-500/20",
                   hoverBorder: "hover:border-blue-400/40",
@@ -328,32 +328,15 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                   liveColor: "text-blue-400 hover:text-blue-300",
                   techBg: "bg-blue-500/20",
                   techText: "text-blue-300",
+                  liveUrl: "https://e-commerce-r.onrender.com/",
+                  githubUrl: "https://github.com/rohitp-18/e-commerce",
                 },
                 {
-                  title: "Task Management App",
-                  stack: "Next.js",
+                  title: "Social Networking Website",
+                  stack: "Next.js + Express",
                   description:
-                    "Collaborative project management tool with real-time updates, team collaboration features, and advanced analytics dashboard.",
-                  technologies: [
-                    "Next.js",
-                    "TypeScript",
-                    "Prisma",
-                    "PostgreSQL",
-                  ],
-                  gradient: "from-purple-500/10 to-cyan-500/10",
-                  border: "border-purple-500/20",
-                  hoverBorder: "hover:border-purple-400/40",
-                  stackColor: "text-purple-400",
-                  liveColor: "text-purple-400 hover:text-purple-300",
-                  techBg: "bg-purple-500/20",
-                  techText: "text-purple-300",
-                },
-                {
-                  title: "Social Media Dashboard",
-                  stack: "React + Express",
-                  description:
-                    "Analytics dashboard for social media management with data visualization, scheduling tools, and performance tracking across multiple platforms.",
-                  technologies: ["React", "Express", "Chart.js", "Redis"],
+                    "Social platform with user profiles, resume links, job portal, groups, and company pages for networking and career growth.",
+                  technologies: ["React", "TypeScript", "Next.js", "MongoDB"],
                   gradient: "from-cyan-500/10 to-blue-500/10",
                   border: "border-cyan-500/20",
                   hoverBorder: "hover:border-cyan-400/40",
@@ -361,6 +344,8 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                   liveColor: "text-cyan-400 hover:text-cyan-300",
                   techBg: "bg-cyan-500/20",
                   techText: "text-cyan-300",
+                  // liveUrl: "https://social-network-demo.example.com",
+                  githubUrl: "https://github.com/rohitp-18/social-media",
                 },
                 {
                   title: "Portfolio Website",
@@ -380,13 +365,15 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                   liveColor: "text-green-400 hover:text-green-300",
                   techBg: "bg-green-500/20",
                   techText: "text-green-300",
+                  liveUrl: "https://rohit-patil.vercel.app",
+                  githubUrl: "https://github.com/rohitp-18/my-portfolio",
                 },
                 {
-                  title: "Real Estate Platform",
-                  stack: "MERN + Maps",
+                  title: "Real-Time Chat Website",
+                  stack: "MERN + Socket.io",
                   description:
-                    "Property listing platform with interactive maps, advanced search filters, virtual tours, and real-time chat between buyers and sellers.",
-                  technologies: ["React", "Node.js", "MongoDB", "Mapbox"],
+                    "Real-time chat application for instant messaging between users.",
+                  technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
                   gradient: "from-orange-500/10 to-red-500/10",
                   border: "border-orange-500/20",
                   hoverBorder: "hover:border-orange-400/40",
@@ -394,14 +381,20 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                   liveColor: "text-orange-400 hover:text-orange-300",
                   techBg: "bg-orange-500/20",
                   techText: "text-orange-300",
-                  hideMobile: true,
+                  // liveUrl: "https://chat-demo.example.com",
+                  githubUrl: "https://github.com/rohitp-18/chat",
                 },
                 {
-                  title: "Learning Management System",
-                  stack: "Next.js + Prisma",
+                  title: "Expense Management Website",
+                  stack: "MERN STACK",
                   description:
-                    "Comprehensive LMS with course creation, video streaming, progress tracking, assignments, and certificate generation for online education.",
-                  technologies: ["Next.js", "Prisma", "PostgreSQL", "AWS S3"],
+                    "Track and visualize your transactions with interactive graphs and analytics.",
+                  technologies: [
+                    "React.js",
+                    "Node.js",
+                    "MongoDB",
+                    "MUI library",
+                  ],
                   gradient: "from-indigo-500/10 to-purple-500/10",
                   border: "border-indigo-500/20",
                   hoverBorder: "hover:border-indigo-400/40",
@@ -410,6 +403,30 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                   techBg: "bg-indigo-500/20",
                   techText: "text-indigo-300",
                   hideMobile: true,
+                  // liveUrl: "https://expense-demo.example.com",
+                  githubUrl: "https://github.com/rohitp-18/transaction-visual",
+                },
+                {
+                  title: "To Do - Task Management App",
+                  stack: "React.js + Node.js",
+                  description:
+                    "Organize and track your tasks with drag-and-drop functionality for easy management.",
+                  technologies: [
+                    "TypeScript",
+                    "React.js",
+                    "Node.js",
+                    "MongoDB",
+                  ],
+                  gradient: "from-purple-500/10 to-cyan-500/10",
+                  border: "border-purple-500/20",
+                  hoverBorder: "hover:border-purple-400/40",
+                  stackColor: "text-purple-400",
+                  liveColor: "text-purple-400 hover:text-purple-300",
+                  techBg: "bg-purple-500/20",
+                  techText: "text-purple-300",
+                  hideMobile: true,
+                  liveUrl: "https://todo-task-web.onrender.com/",
+                  githubUrl: "https://github.com/rohitp-18/todo-typescript",
                 },
               ].map((project, index) => (
                 <div
@@ -466,8 +483,19 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                   {/* Action Buttons */}
                   <div className="flex gap-4 text-sm mt-auto pt-2">
                     <a
-                      href="#"
-                      className={`${project.liveColor} transition-colors duration-300 font-medium hover:underline flex items-center gap-1`}
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${
+                        project.liveUrl
+                          ? project.liveColor
+                          : "text-gray-500 cursor-not-allowed opacity-60"
+                      } transition-colors duration-300 font-medium hover:underline flex items-center gap-1`}
+                      tabIndex={project.liveUrl ? 0 : -1}
+                      aria-disabled={!project.liveUrl}
+                      onClick={(e) => {
+                        if (!project.liveUrl) e.preventDefault();
+                      }}
                     >
                       <span>Live Demo</span>
                       <svg
@@ -485,7 +513,9 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                       </svg>
                     </a>
                     <a
-                      href="#"
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-gray-400 hover:text-gray-300 transition-colors duration-300 font-medium hover:underline flex items-center gap-1"
                     >
                       <span>GitHub</span>
