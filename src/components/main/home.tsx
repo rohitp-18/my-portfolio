@@ -116,7 +116,7 @@ function Home({ visibleSections }: { visibleSections: Set<string> }) {
             }`}
           >
             <a
-              href="https://drive.google.com/file/d/17d_BguCCCAlKLEP7toTBBikHKQl8kLZw/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1x7CPYb1J0wlcJ9E6fqwJz3EmZVWKeeSo/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block transform hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 w-full sm:w-auto animate-slide-up hover:animate-pulse-glow"

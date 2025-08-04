@@ -404,7 +404,7 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                   techText: "text-indigo-300",
                   hideMobile: true,
                   // liveUrl: "https://expense-demo.example.com",
-                  githubUrl: "https://github.com/rohitp-18/transaction-visual",
+                  githubUrl: "https://github.com/rohitp-18/expense_tracker",
                 },
                 {
                   title: "To Do - Task Management App",

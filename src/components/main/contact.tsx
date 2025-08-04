@@ -297,7 +297,7 @@ function Contact({ visibleSections }: { visibleSections: Set<string> }) {
               </HoverBorderGradient>
             </a>
             <a
-              href="https://drive.google.com/file/d/17d_BguCCCAlKLEP7toTBBikHKQl8kLZw/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1x7CPYb1J0wlcJ9E6fqwJz3EmZVWKeeSo/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block flex-1 sm:flex-none animate-bounce-gentle delay-200"
