@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rohit Patil | MERN Stack Developer",
+  title: "Rohit Patil | Full Stack Developer & GenAI Enthusiast",
   description:
-    "Portfolio of Rohit Patil, a MERN Stack Developer, specializing in building dynamic and responsive web applications., showcasing skills in React, Node.js, and MongoDB.",
+    "Portfolio of Rohit Patil, a Full Stack Engineer specializing in MERN Stack, Next.js, and Generative AI (RAG). Building scalable web apps and intelligent AI solutions.",
   keywords: [
     "Rohit Patil",
     "MERN Stack Developer",
@@ -51,11 +51,25 @@ export const metadata: Metadata = {
     "Web Development Projects",
     "Web Development Experience",
     "Web Development Career",
+    "Full Stack Developer",
+    "GenAI Engineer",
+    "MERN Stack",
+    "Next.js",
+    "React.js",
+    "TypeScript",
+    "Generative AI",
+    "RAG",
+    "LangChain",
+    "Docker",
+    "AWS",
+    "Python",
+    "FastAPI",
+    "Software Engineer Portfolio",
   ],
   icons: {
-    icon: "https://res.cloudinary.com/rdisexc23ed/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1719936876/Portfolio/about/avatar/nkp5hck2p22a4fds9g2j.jpg",
+    icon: "https://res.cloudinary.com/rdisexc23ed/image/upload/r_max/v1769272525/profile_d4p0qs.png",
     shortcut:
-      "https://res.cloudinary.com/rdisexc23ed/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1719936876/Portfolio/about/avatar/nkp5hck2p22a4fds9g2j.jpg",
+      "https://res.cloudinary.com/rdisexc23ed/image/upload/r_max/v1769272525/profile_d4p0qs.png",
   },
 };
 

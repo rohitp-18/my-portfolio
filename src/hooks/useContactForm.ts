@@ -5,7 +5,7 @@ import { useState } from "react";
 interface FormData {
   name: string;
   email: string;
-  subject: string;
+  type: string;
   message: string;
 }
 
@@ -19,8 +19,8 @@ export const useContactForm = () => {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
-    subject: "",
     message: "",
+    type: ""
   });
 
   const [formState, setFormState] = useState<FormState>({
@@ -41,7 +41,7 @@ export const useContactForm = () => {
     setFormData({
       name: "",
       email: "",
-      subject: "",
+      type: "",
       message: "",
     });
     setFormState({

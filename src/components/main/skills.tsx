@@ -1,5 +1,6 @@
 import React from "react";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
+import { Terminal } from "lucide-react";
 
 function Skills({ visibleSections }: { visibleSections: Set<string> }) {
   return (
@@ -9,8 +10,8 @@ function Skills({ visibleSections }: { visibleSections: Set<string> }) {
         visibleSections.has("skills") ? "opacity-100" : "opacity-30"
       }`}
     >
-      <div className="flex items-center justify-center lg:justify-between h-full relative px-8 lg:px-16 z-50">
-        <div className="max-w-2xl">
+      <div className="flex items-center justify-center lg:justify-normal h-full gap-10 relative px-8 lg:px-16 z-50">
+        <div className="max-w-2xl flex-1">
           <div
             className={`welcome text-xs md:text-sm tracking-[0.15em] text-gray-400 font-semibold mb-3 uppercase transition-all duration-700 ${
               visibleSections.has("skills")
@@ -22,7 +23,7 @@ function Skills({ visibleSections }: { visibleSections: Set<string> }) {
             My Skills
           </div>
           <div
-            className={`title text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight transition-all duration-700 ${
+            className={`title text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight transition-all duration-700 ${
               visibleSections.has("skills")
                 ? "translate-y-0 opacity-100"
                 : "translate-y-8 opacity-0"
@@ -76,39 +77,24 @@ function Skills({ visibleSections }: { visibleSections: Set<string> }) {
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {[
-                  { name: "React.js", level: "90%" },
-                  { name: "Next.js", level: "85%" },
-                  { name: "JavaScript", level: "92%" },
-                  { name: "TypeScript", level: "80%" },
-                  { name: "HTML5", level: "95%" },
-                  { name: "CSS3", level: "88%" },
+                  "React.js",
+                  "Next.js",
+                  "TypeScript",
+                  "Tailwind CSS",
+                  "Redux Toolkit",
+                  "ShadCN",
                 ].map((skill, index) => (
                   <div
-                    key={skill.name}
-                    className={`bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-lg p-3 hover:border-blue-400/40 hover:scale-105 transition-all duration-500 cursor-pointer group ${
+                    key={skill}
+                    className={`bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-lg px-3 py-2 hover:border-blue-400/40 hover:scale-105 transition-all duration-500 cursor-pointer group ${
                       visibleSections.has("skills")
                         ? "scale-100 opacity-100"
                         : "scale-90 opacity-0"
                     }`}
                     style={{ transitionDelay: `${700 + index * 100}ms` }}
                   >
-                    <div className="text-sm text-gray-300 font-medium mb-1 group-hover:text-white transition-colors duration-300">
-                      {skill.name}
-                    </div>
-                    <div className="w-full bg-gray-700 rounded-full h-1.5">
-                      <div
-                        className={`bg-gradient-to-r from-blue-400 to-purple-400 h-1.5 rounded-full transition-all duration-1500 ${
-                          visibleSections.has("skills")
-                            ? "opacity-100"
-                            : "opacity-0"
-                        }`}
-                        style={{
-                          width: visibleSections.has("skills")
-                            ? skill.level
-                            : "0%",
-                          transitionDelay: `${1000 + index * 150}ms`,
-                        }}
-                      ></div>
+                    <div className="text-sm text-gray-300 font-medium group-hover:text-white transition-colors duration-300">
+                      {skill}
                     </div>
                   </div>
                 ))}
@@ -131,77 +117,103 @@ function Skills({ visibleSections }: { visibleSections: Set<string> }) {
                   }`}
                   style={{ transitionDelay: "1300ms" }}
                 ></div>
-                Backend Development
+                Backend & Database
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {[
-                  { name: "Node.js", level: "88%" },
-                  { name: "Express.js", level: "85%" },
-                  { name: "MongoDB", level: "82%" },
-                  { name: "MySQL", level: "75%" },
-                  { name: "REST APIs", level: "90%" },
-                  { name: "GraphQL", level: "70%" },
+                  "Node.js",
+                  "Express.js",
+                  "MongoDB",
+                  "FastAPI",
+                  "Socket.io",
+                  "Mongoose",
                 ].map((skill, index) => (
                   <div
-                    key={skill.name}
-                    className={`bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/20 rounded-lg p-3 hover:border-purple-400/40 hover:scale-105 transition-all duration-500 cursor-pointer group ${
+                    key={skill}
+                    className={`bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/20 rounded-lg px-3 py-2 hover:border-purple-400/40 hover:scale-105 transition-all duration-500 cursor-pointer group ${
                       visibleSections.has("skills")
                         ? "scale-100 opacity-100"
                         : "scale-90 opacity-0"
                     }`}
                     style={{ transitionDelay: `${1400 + index * 100}ms` }}
                   >
-                    <div className="text-sm text-gray-300 font-medium mb-1 group-hover:text-white transition-colors duration-300">
-                      {skill.name}
-                    </div>
-                    <div className="w-full bg-gray-700 rounded-full h-1.5">
-                      <div
-                        className={`bg-gradient-to-r from-purple-400 to-cyan-400 h-1.5 rounded-full transition-all duration-1500 ${
-                          visibleSections.has("skills")
-                            ? "opacity-100"
-                            : "opacity-0"
-                        }`}
-                        style={{
-                          width: visibleSections.has("skills")
-                            ? skill.level
-                            : "0%",
-                          transitionDelay: `${1700 + index * 150}ms`,
-                        }}
-                      ></div>
+                    <div className="text-sm text-gray-300 font-medium group-hover:text-white transition-colors duration-300">
+                      {skill}
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Tools & Technologies */}
+            {/* Generative AI Skills */}
             <div
-              className={`tools-section transition-all duration-700 ${
+              className={`ai-section transition-all duration-700 ${
                 visibleSections.has("skills")
                   ? "translate-x-0 opacity-100"
                   : "-translate-x-8 opacity-0"
               }`}
               style={{ transitionDelay: "1900ms" }}
             >
+              <h3 className="text-lg md:text-xl font-semibold text-yellow-400 mb-4 flex items-center gap-2">
+                <div
+                  className={`w-3 h-3 bg-yellow-400 rounded-full transition-all duration-500 ${
+                    visibleSections.has("skills") ? "scale-100" : "scale-0"
+                  }`}
+                  style={{ transitionDelay: "2000ms" }}
+                ></div>
+                Generative AI
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                {[
+                  "LangChain",
+                  "RAG Pipelines",
+                  "Vector DBs (Pinecone)",
+                  "Python",
+                  "Gemini API",
+                ].map((skill, index) => (
+                  <div
+                    key={skill}
+                    className={`bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border border-yellow-500/20 rounded-lg px-3 py-2 hover:border-yellow-400/40 hover:scale-105 transition-all duration-500 cursor-pointer group ${
+                      visibleSections.has("skills")
+                        ? "scale-100 opacity-100"
+                        : "scale-90 opacity-0"
+                    }`}
+                    style={{ transitionDelay: `${2100 + index * 100}ms` }}
+                  >
+                    <div className="text-sm text-gray-300 font-medium group-hover:text-white transition-colors duration-300">
+                      {skill}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* DevOps & Tools */}
+            <div
+              className={`tools-section transition-all duration-700 ${
+                visibleSections.has("skills")
+                  ? "translate-x-0 opacity-100"
+                  : "-translate-x-8 opacity-0"
+              }`}
+              style={{ transitionDelay: "2600ms" }}
+            >
               <h3 className="text-lg md:text-xl font-semibold text-cyan-400 mb-4 flex items-center gap-2">
                 <div
                   className={`w-3 h-3 bg-cyan-400 rounded-full transition-all duration-500 ${
                     visibleSections.has("skills") ? "scale-100" : "scale-0"
                   }`}
-                  style={{ transitionDelay: "2000ms" }}
+                  style={{ transitionDelay: "2700ms" }}
                 ></div>
-                Tools & Technologies
+                DevOps & Tools
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {[
-                  "Git & GitHub",
-                  "VS Code",
-                  "Postman",
                   "Docker",
-                  "ShadCN",
-                  "Vercel",
-                  "Tailwind CSS",
-                  "Bootstrap",
+                  "AWS EC2",
+                  "Nginx",
+                  "Git/GitHub",
+                  "Postman",
+                  "Linux",
                 ].map((tool, index) => (
                   <div
                     key={tool}
@@ -210,7 +222,7 @@ function Skills({ visibleSections }: { visibleSections: Set<string> }) {
                         ? "scale-100 opacity-100 rotate-0"
                         : "scale-90 opacity-0 rotate-3"
                     }`}
-                    style={{ transitionDelay: `${2100 + index * 100}ms` }}
+                    style={{ transitionDelay: `${2800 + index * 100}ms` }}
                   >
                     <span className="text-sm text-gray-300 font-medium group-hover:text-white transition-colors duration-300">
                       {tool}
@@ -227,7 +239,7 @@ function Skills({ visibleSections }: { visibleSections: Set<string> }) {
                 ? "translate-y-0 opacity-100"
                 : "translate-y-8 opacity-0"
             }`}
-            style={{ transitionDelay: "2800ms" }}
+            style={{ transitionDelay: "3400ms" }}
           >
             <a
               href="#projects"
@@ -249,110 +261,92 @@ function Skills({ visibleSections }: { visibleSections: Set<string> }) {
         </div>
 
         {/* Skills Visualization */}
-        <div
-          className={`hidden lg:flex w-full h-full items-center justify-center relative max-w-md transition-all duration-1000 ${
-            visibleSections.has("skills")
-              ? "opacity-100 scale-100"
-              : "opacity-0 scale-90"
-          }`}
-          style={{ transitionDelay: "600ms" }}
-        >
-          <div className="relative w-80 h-80">
-            {/* Circular Progress Indicators */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="relative">
-                {/* Main Circle */}
-                <div
-                  className={`w-64 h-64 rounded-full border-4 border-blue-500/20 flex items-center justify-center transition-all duration-1000 hover:border-blue-500/40 ${
-                    visibleSections.has("skills")
-                      ? "scale-100 opacity-100 rotate-0"
-                      : "scale-50 opacity-0 rotate-180"
-                  }`}
-                  style={{ transitionDelay: "2900ms" }}
-                >
-                  <div
-                    className={`w-48 h-48 rounded-full border-4 border-purple-500/20 flex items-center justify-center transition-all duration-1000 hover:border-purple-500/40 ${
-                      visibleSections.has("skills")
-                        ? "scale-100 opacity-100 rotate-0"
-                        : "scale-50 opacity-0 -rotate-180"
-                    }`}
-                    style={{ transitionDelay: "3000ms" }}
-                  >
-                    <div
-                      className={`w-32 h-32 rounded-full border-4 border-cyan-500/20 flex items-center justify-center transition-all duration-1000 hover:border-cyan-500/40 ${
-                        visibleSections.has("skills")
-                          ? "scale-100 opacity-100 rotate-0"
-                          : "scale-50 opacity-0 rotate-180"
-                      }`}
-                      style={{ transitionDelay: "3100ms" }}
-                    >
-                      <div
-                        className={`text-center transition-all duration-700 ${
-                          visibleSections.has("skills")
-                            ? "translate-y-0 opacity-100"
-                            : "translate-y-4 opacity-0"
-                        }`}
-                        style={{ transitionDelay: "3200ms" }}
-                      >
-                        <div className="text-2xl font-bold text-white mb-1">
-                          3+
-                        </div>
-                        <div className="text-sm text-gray-400">Years</div>
-                        <div className="text-sm text-gray-400">Experience</div>
-                      </div>
-                    </div>
-                  </div>
+        <div className="relative h-full lg:flex hidden items-center flex-1 justify-center">
+          {/* Decorative Glow Behind */}
+          <div className="absolute inset-0 bg-blue-600/20 blur-[100px] max-w-96 rounded-full opacity-50"></div>
+
+          {/* Code Window */}
+          <div className="relative w-full max-w-96 bg-[#1e1e1e] rounded-xl shadow-2xl border border-slate-700 overflow-hidden transform hover:scale-[1.02] transition-transform duration-500">
+            {/* Window Header */}
+            <div className="flex items-center justify-between px-4 py-3 bg-[#252526] border-b border-slate-700">
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+              <div className="text-xs text-gray-400 font-mono flex items-center gap-2">
+                <Terminal size={12} />
+                rohit_config.ts
+              </div>
+            </div>
+
+            {/* Code Content */}
+            <div className="xl:p-6 p-4 font-mono text-sm md:text-base leading-relaxed overflow-x-auto">
+              <div className="space-y-1">
+                <div className="flex">
+                  <span className="text-pink-400 mr-2">const</span>
+                  <span className="text-blue-300">developer</span>
+                  <span className="text-white mx-2">=</span>
+                  <span className="text-yellow-300">{`{`}</span>
                 </div>
 
-                {/* Floating Skill Tags */}
-                <div
-                  className={`absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-full px-3 py-1 hover:scale-110 transition-all duration-500 cursor-pointer group ${
-                    visibleSections.has("skills")
-                      ? "scale-100 opacity-100 translate-y-0"
-                      : "scale-0 opacity-0 -translate-y-4"
-                  }`}
-                  style={{ transitionDelay: "3300ms" }}
-                >
-                  <span className="text-xs text-blue-300 font-medium group-hover:text-blue-200 transition-colors duration-300">
-                    React
-                  </span>
+                <div className="pl-6">
+                  <span className="text-blue-300">name:</span>
+                  <span className="text-green-300 ml-2">"Rohit Patil"</span>,
                 </div>
-                <div
-                  className={`absolute top-1/4 -right-6 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-3 py-1 hover:scale-110 transition-all duration-500 cursor-pointer group ${
-                    visibleSections.has("skills")
-                      ? "scale-100 opacity-100 translate-x-0"
-                      : "scale-0 opacity-0 translate-x-4"
-                  }`}
-                  style={{ transitionDelay: "3400ms" }}
-                >
-                  <span className="text-xs text-purple-300 font-medium group-hover:text-purple-200 transition-colors duration-300">
-                    Node.js
+
+                <div className="pl-6">
+                  <span className="text-blue-300">role:</span>
+                  <span className="text-green-300 ml-2">
+                    "Full Stack GenAI Developer"
                   </span>
+                  ,
                 </div>
-                <div
-                  className={`absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full px-3 py-1 hover:scale-110 transition-all duration-500 cursor-pointer group ${
-                    visibleSections.has("skills")
-                      ? "scale-100 opacity-100 translate-y-0"
-                      : "scale-0 opacity-0 translate-y-4"
-                  }`}
-                  style={{ transitionDelay: "3500ms" }}
-                >
-                  <span className="text-xs text-cyan-300 font-medium group-hover:text-cyan-200 transition-colors duration-300">
-                    MongoDB
-                  </span>
+
+                <div className="pl-6">
+                  <span className="text-blue-300">stack:</span>
+                  <span className="text-yellow-300 ml-2">[</span>
                 </div>
-                <div
-                  className={`absolute top-1/4 -left-6 bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-500/30 rounded-full px-3 py-1 hover:scale-110 transition-all duration-500 cursor-pointer group ${
-                    visibleSections.has("skills")
-                      ? "scale-100 opacity-100 translate-x-0"
-                      : "scale-0 opacity-0 -translate-x-4"
-                  }`}
-                  style={{ transitionDelay: "3600ms" }}
-                >
-                  <span className="text-xs text-green-300 font-medium group-hover:text-green-200 transition-colors duration-300">
-                    Express
-                  </span>
+                <div className="pl-12 text-green-300">
+                  "Next.js", "TypeScript", "Node.js"
+                  <br />
                 </div>
+                <div className="pl-6 text-yellow-300">],</div>
+
+                <div className="pl-6">
+                  <span className="text-blue-300">ai_expertise:</span>
+                  <span className="text-yellow-300 ml-2">[</span>
+                </div>
+                <div className="pl-12 text-green-300">
+                  "LangChain", "RAG", "Vector DBs"
+                  <br />
+                </div>
+                <div className="pl-6 text-yellow-300">],</div>
+
+                <div className="pl-6">
+                  <span className="text-blue-300">infrastructure:</span>
+                  <span className="text-yellow-300 ml-2">{`{`}</span>
+                </div>
+                <div className="pl-12">
+                  <span className="text-blue-300">cloud:</span>
+                  <span className="text-green-300 ml-2">"AWS EC2"</span>,
+                </div>
+                <div className="pl-12">
+                  <span className="text-blue-300">container:</span>
+                  <span className="text-green-300 ml-2">"Docker"</span>,
+                </div>
+                <div className="pl-12">
+                  <span className="text-blue-300">server:</span>
+                  <span className="text-green-300 ml-2">"Nginx"</span>
+                </div>
+                <div className="pl-6 text-yellow-300">{`}`},</div>
+
+                <div className="pl-6">
+                  <span className="text-blue-300">hard_worker:</span>
+                  <span className="text-orange-400 ml-2">true</span>
+                </div>
+
+                <div className="text-yellow-300">{`};`}</div>
               </div>
             </div>
           </div>

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Spotlight from "@/components/main/spotlight";
-import Loader from "@/components/main/loader";
+import Loader from "@/app/loader";
 import Contact from "@/components/main/contact";
 import Footer from "@/components/main/footer";
 import Home from "@/components/main/home";
@@ -10,21 +10,13 @@ import About from "@/components/main/about";
 import Skills from "@/components/main/skills";
 import Educations from "@/components/main/educations";
 import Project from "@/components/main/project";
+import Experience from "@/components/main/experience";
 
 function Page() {
-  const [isLoading, setIsLoading] = useState(true);
   const [visibleSections, setVisibleSections] = useState<Set<string>>(
-    new Set()
+    new Set(),
   );
   const [scrollProgress, setScrollProgress] = useState(0);
-
-  // Loading effect
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1500);
-    return () => clearTimeout(timer);
-  }, []);
 
   // Scroll progress tracking
   useEffect(() => {
@@ -43,13 +35,12 @@ function Page() {
   // Intersection Observer for scroll animations
   useEffect(() => {
     // Only run on client side after loading is complete
-    if (typeof window === "undefined" || isLoading) return;
+    if (typeof window === "undefined") return;
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const sectionId = entry.target.id;
-          console.log(sectionId);
           if (!sectionId) return;
 
           setVisibleSections((prev) => {
@@ -66,7 +57,7 @@ function Page() {
       {
         threshold: 0.1,
         rootMargin: "50px 0px -50px 0px",
-      }
+      },
     );
 
     // Larger delay to ensure all components are mounted
@@ -79,7 +70,7 @@ function Page() {
       clearTimeout(timeoutId);
       observer.disconnect();
     };
-  }, [isLoading]);
+  }, []);
 
   // Smooth scroll behavior
   useEffect(() => {
@@ -88,14 +79,6 @@ function Page() {
       document.documentElement.style.scrollBehavior = "auto";
     };
   }, []);
-
-  useEffect(() => {
-    console.log(visibleSections);
-  }, [visibleSections]);
-
-  if (isLoading) {
-    return <Loader />;
-  }
 
   return (
     <>
@@ -230,7 +213,7 @@ function Page() {
         }
       `}</style>
 
-      <main className="flex min-h-screen pt-14c flex-col items-center justify-between relative">
+      <div className="flex min-h-screen flex-col items-center justify-between relative">
         <Spotlight />
 
         <Home visibleSections={visibleSections} />
@@ -241,13 +224,15 @@ function Page() {
 
         <Educations visibleSections={visibleSections} />
 
+        <Experience visibleSections={visibleSections} />
+
         <Project visibleSections={visibleSections} />
 
         <Contact visibleSections={visibleSections} />
 
         {/* Floating Action Button */}
         <Footer scrollProgress={scrollProgress} />
-      </main>
+      </div>
     </>
   );
 }

@@ -27,7 +27,7 @@ function Educations({ visibleSections }: { visibleSections: Set<string> }) {
             My Education
           </div>
           <div
-            className={`title text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6 leading-tight transition-all duration-700 delay-500 text-center lg:text-left ${
+            className={`title text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6 leading-tight transition-all duration-700 delay-500 text-center lg:text-left ${
               visibleSections.has("education")
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
@@ -92,11 +92,12 @@ function Educations({ visibleSections }: { visibleSections: Set<string> }) {
                     </span>
                   </div>
                   <p className="text-xs text-gray-400 mb-2 group-hover:text-gray-300 transition-colors duration-300">
-                    Solapur University, Solapur
+                    Punyashlok Ahilyabai Holkar University, Solapur
                   </p>
                   <p className="text-xs text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
-                    Comprehensive study of computer science fundamentals, data
-                    structures, algorithms, and software engineering principles.
+                    Specialized in Computer Science with a focus on Data
+                    Structures, Algorithms, and Database Management Systems
+                    (DBMS)..
                   </p>
                 </div>
 
@@ -123,7 +124,10 @@ function Educations({ visibleSections }: { visibleSections: Set<string> }) {
                   <p className="text-xs text-gray-400 mb-2 group-hover:text-gray-300 transition-colors duration-300">
                     SGRGS Mahavidyalay Paranda
                   </p>
-                  <p className="text-xs text-gray-300 group-hover:text-gray-200 transition-colors duration-300"></p>
+                  <p className="text-xs text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
+                    Science Stream with Mathematics, Physics, Chemistry, and
+                    Biology
+                  </p>
                 </div>
               </div>
             </div>
@@ -143,9 +147,9 @@ function Educations({ visibleSections }: { visibleSections: Set<string> }) {
               <div className="space-y-2 md:space-y-3">
                 {[
                   {
-                    title: "Computer Science Fundamentals",
+                    title: "Core CS Fundamentals",
                     description:
-                      "Data structures, algorithms, object-oriented programming, and software design patterns",
+                      "Data Structures & Algorithms (DSA), Object-Oriented Programming (OOP), Operating Systems, and Computer Networks.",
                     color: "blue",
                     delay: "1600ms",
                   },
@@ -157,9 +161,9 @@ function Educations({ visibleSections }: { visibleSections: Set<string> }) {
                     delay: "1700ms",
                   },
                   {
-                    title: "Industry Best Practices",
+                    title: "Specialized Coursework",
                     description:
-                      "Version control, testing methodologies, deployment strategies, and agile development",
+                      "Self-directed learning in Generative AI, Vector Databases, and Cloud Architecture (AWS).",
                     color: "cyan",
                     delay: "1800ms",
                   },
@@ -538,19 +542,6 @@ function Educations({ visibleSections }: { visibleSections: Set<string> }) {
                         <div className="text-xs font-medium text-white mb-1 group-hover:text-gray-200">
                           {skill.tech}
                         </div>
-                        <div className="w-12 bg-gray-600/50 rounded-full h-1">
-                          <div
-                            className={`${skillClasses.bar} h-1 rounded-full transition-all duration-1000 group-hover:animate-pulse`}
-                            style={{
-                              width: visibleSections.has("education")
-                                ? skill.level
-                                : "0%",
-                              transitionDelay: visibleSections.has("education")
-                                ? `calc(${skill.delay} + 500ms)`
-                                : "0ms",
-                            }}
-                          ></div>
-                        </div>
                       </div>
                     );
                   })}
@@ -633,13 +624,13 @@ function Educations({ visibleSections }: { visibleSections: Set<string> }) {
                 <div className="grid grid-cols-2 gap-2">
                   {[
                     {
-                      value: "4.0",
-                      label: "GPA",
+                      value: "9.29",
+                      label: "CGPA",
                       color: "blue",
                       delay: "3200ms",
                     },
                     {
-                      value: "8+",
+                      value: "10+",
                       label: "Projects",
                       color: "purple",
                       delay: "3400ms",

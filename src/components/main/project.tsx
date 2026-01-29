@@ -20,7 +20,7 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
             My Projects
           </div>
           <div
-            className={`title text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight ${
+            className={`title text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight ${
               visibleSections.has("projects") ? "animate-slide-up" : ""
             }`}
             style={{ "--stagger-delay": "2" } as React.CSSProperties}
@@ -58,12 +58,12 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                 </h3>
                 <div className="grid grid-cols-2 md:grid-cols-3 overflow-hidden gap-3 stagger-children min-w-0">
                   {[
-                    { name: "Web Applications", count: "6+" },
+                    { name: "Web Applications", count: "7+" },
                     { name: "E-Commerce Sites", count: "1+" },
-                    { name: "Mobile Apps", count: "1+" },
+                    { name: "Gen AI Apps", count: "1+" },
                     { name: "Dashboard UIs", count: "2+" },
                     { name: "API Development", count: "5+" },
-                    { name: "Deployment", count: "3+" },
+                    { name: "Cloud Deployment", count: "5" },
                   ].map((category, index) => (
                     <div
                       key={index}
@@ -191,7 +191,7 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                             }`}
                           >
                             <div className="text-2xl font-bold text-white mb-1 animate-bounce-slow">
-                              9+
+                              10+
                             </div>
                             <div className="text-sm text-gray-400">
                               Projects
@@ -295,8 +295,8 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                         : "opacity-0 translate-y-4"
                     }`}
                   >
-                    <div className="text-lg font-bold text-purple-400">5★</div>
-                    <div className="text-xs text-gray-300">Client Rating</div>
+                    <div className="text-lg font-bold text-purple-400">2</div>
+                    <div className="text-xs text-gray-300">Internships</div>
                   </div>
                 </div>
               </div>
@@ -316,22 +316,6 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 {
-                  title: "E-Commerce Platform",
-                  stack: "MERN Stack",
-                  description:
-                    "E-commerce platform with user authentication, dashboards for admin and sellers, and inventory management. Built for real-world deployment.",
-                  technologies: ["React", "Node.js", "MongoDB", "SCSS"],
-                  gradient: "from-blue-500/10 to-purple-500/10",
-                  border: "border-blue-500/20",
-                  hoverBorder: "hover:border-blue-400/40",
-                  stackColor: "text-blue-400",
-                  liveColor: "text-blue-400 hover:text-blue-300",
-                  techBg: "bg-blue-500/20",
-                  techText: "text-blue-300",
-                  liveUrl: "https://e-commerce-r.onrender.com/",
-                  githubUrl: "https://github.com/rohitp-18/e-commerce",
-                },
-                {
                   title: "Social Networking Website",
                   stack: "Next.js + Express",
                   description:
@@ -344,8 +328,46 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                   liveColor: "text-cyan-400 hover:text-cyan-300",
                   techBg: "bg-cyan-500/20",
                   techText: "text-cyan-300",
-                  // liveUrl: "https://social-network-demo.example.com",
+                  liveUrl: "https://www.social.rohitp.tech/",
                   githubUrl: "https://github.com/rohitp-18/social-media",
+                },
+                {
+                  title: "E-Commerce Platform",
+                  stack: "MERN Stack",
+                  description:
+                    "E-commerce platform with user authentication, dashboards for admin and sellers, and inventory management. Built for real-world deployment.",
+                  technologies: ["React", "Node.js", "MongoDB", "SCSS"],
+                  gradient: "from-blue-500/10 to-purple-500/10",
+                  border: "border-blue-500/20",
+                  hoverBorder: "hover:border-blue-400/40",
+                  stackColor: "text-blue-400",
+                  liveColor: "text-blue-400 hover:text-blue-300",
+                  techBg: "bg-blue-500/20",
+                  techText: "text-blue-300",
+                  liveUrl: "https://www.store.rohitp.tech/",
+                  githubUrl: "https://github.com/rohitp-18/e-commerce",
+                },
+                {
+                  title: "Multi-Document RAG Platform",
+                  stack: "GENAI + NEXT.JS",
+                  description:
+                    "Intelligent document processing system. Features semantic search using Pinecone vector DB, real-time Q&A with Gemini API, and persistent chat history.",
+                  technologies: [
+                    "Next.js",
+                    "Python",
+                    "LangChain",
+                    "Pinecone",
+                    "Redux",
+                  ],
+                  gradient: "from-purple-500/10 to-cyan-500/10",
+                  border: "border-purple-500/20",
+                  hoverBorder: "hover:border-purple-400/40",
+                  stackColor: "text-purple-400",
+                  liveColor: "text-purple-400 hover:text-purple-300",
+                  techBg: "bg-purple-500/20",
+                  techText: "text-purple-300",
+                  liveUrl: "https://www.docs.rohitp.tech/",
+                  githubUrl: "https://github.com/rohitp-18/multi-doc-rag",
                 },
                 {
                   title: "Portfolio Website",
@@ -365,7 +387,7 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                   liveColor: "text-green-400 hover:text-green-300",
                   techBg: "bg-green-500/20",
                   techText: "text-green-300",
-                  liveUrl: "https://rohit-patil.vercel.app",
+                  liveUrl: "https://www.rohitp.tech",
                   githubUrl: "https://github.com/rohitp-18/my-portfolio",
                 },
                 {
@@ -381,8 +403,9 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                   liveColor: "text-orange-400 hover:text-orange-300",
                   techBg: "bg-orange-500/20",
                   techText: "text-orange-300",
+                  hideMobile: true,
                   // liveUrl: "https://chat-demo.example.com",
-                  githubUrl: "https://github.com/rohitp-18/chat",
+                  githubUrl: "https://github.com/rohitp-18/web-chat",
                 },
                 {
                   title: "Expense Management Website",
@@ -405,28 +428,6 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                   hideMobile: true,
                   // liveUrl: "https://expense-demo.example.com",
                   githubUrl: "https://github.com/rohitp-18/expense_tracker",
-                },
-                {
-                  title: "To Do - Task Management App",
-                  stack: "React.js + Node.js",
-                  description:
-                    "Organize and track your tasks with drag-and-drop functionality for easy management.",
-                  technologies: [
-                    "TypeScript",
-                    "React.js",
-                    "Node.js",
-                    "MongoDB",
-                  ],
-                  gradient: "from-purple-500/10 to-cyan-500/10",
-                  border: "border-purple-500/20",
-                  hoverBorder: "hover:border-purple-400/40",
-                  stackColor: "text-purple-400",
-                  liveColor: "text-purple-400 hover:text-purple-300",
-                  techBg: "bg-purple-500/20",
-                  techText: "text-purple-300",
-                  hideMobile: true,
-                  liveUrl: "https://todo-task-web.onrender.com/",
-                  githubUrl: "https://github.com/rohitp-18/todo-typescript",
                 },
               ].map((project, index) => (
                 <div

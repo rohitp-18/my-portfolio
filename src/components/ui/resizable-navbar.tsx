@@ -7,7 +7,7 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "motion/react";
-import Image from "next/image";
+import photo from "../../assets/1717652407586.png";
 
 import React, { useEffect, useRef, useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
@@ -76,9 +76,9 @@ export const Navbar = ({ children, className }: NavbarProps) => {
         React.isValidElement(child)
           ? React.cloneElement(
               child as React.ReactElement<{ visible?: boolean }>,
-              { visible }
+              { visible },
             )
-          : child
+          : child,
       )}
     </motion.div>
   );
@@ -92,7 +92,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         boxShadow: visible
           ? "0 0 32px rgba(59, 130, 246, 0.15), 0 0 64px rgba(147, 51, 234, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)"
           : "0 0 24px rgba(59, 130, 246, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
-        width: visible ? "45%" : "calc(100%-40px)",
+        width: visible ? "85%" : "calc(100%-40px)",
         y: visible ? 15 : 0,
         scale: visible ? 0.98 : 1,
         borderColor: visible
@@ -105,7 +105,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         damping: 30,
       }}
       style={{
-        minWidth: "850px",
+        minWidth: "970px",
       }}
       className={cn(
         "relative z-[60] mx-auto hidden w-[calc(100%-40px)] max-w-7xl flex-row items-center justify-between self-start rounded-2xl bg-gray-950/90 backdrop-blur-md border border-blue-500/30 px-6 py-3 lg:flex",
@@ -116,7 +116,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
           "border-blue-500/40",
           "shadow-blue-500/30",
         ],
-        className
+        className,
       )}
     >
       {/* Background Glow Effect */}
@@ -133,7 +133,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
 
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    item: { name: string; link: string }
+    item: { name: string; link: string },
   ) => {
     e.preventDefault();
 
@@ -208,11 +208,11 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
 
   return (
     <motion.div
-      style={{ marginLeft: "120px" }}
+      style={{ marginLeft: "50px" }}
       onMouseLeave={() => setHovered(null)}
       className={cn(
         "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-1 text-sm font-medium text-muted-foreground transition-colors duration-200 hover:text-foreground lg:flex lg:space-x-1",
-        className
+        className,
       )}
     >
       {items.map((item, idx) => (
@@ -220,8 +220,8 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
           onMouseEnter={() => setHovered(idx)}
           onClick={(e) => handleNavClick(e, item)}
           className={cn(
-            "relative px-4 py-2.5 text-gray-300 transition-all duration-300 hover:text-white rounded-lg group",
-            activeIdx === idx && "text-blue-400 font-semibold"
+            "relative px-3 py-2.5 text-gray-300 transition-all duration-300 hover:text-white rounded-lg group",
+            activeIdx === idx && "text-blue-400 font-semibold",
           )}
           key={`link-${idx}`}
           href={item.link}
@@ -251,7 +251,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
             className={cn(
               "absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full transition-all duration-500 ease-out",
               activeIdx === idx ? "bg-blue-400 scale-125" : "bg-transparent",
-              hovered === idx && activeIdx !== idx && "bg-gray-400 scale-100"
+              hovered === idx && activeIdx !== idx && "bg-gray-400 scale-100",
             )}
           />
 
@@ -295,7 +295,7 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
           "border-blue-500/40",
           "shadow-blue-500/30",
         ],
-        className
+        className,
       )}
     >
       {/* Background Glow Effect */}
@@ -314,7 +314,7 @@ export const MobileNavHeader = ({
     <div
       className={cn(
         "flex w-full flex-row items-center justify-between",
-        className
+        className,
       )}
     >
       {children}
@@ -339,7 +339,7 @@ export const MobileNavMenu = ({
           className={cn(
             "absolute inset-x-0 top-20 z-50 flex w-full flex-col items-start justify-start gap-2 rounded-2xl bg-gray-950/95 backdrop-blur-md border border-blue-500/30 px-6 py-6 shadow-2xl shadow-blue-500/20",
             "before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-b before:from-blue-500/5 before:to-purple-500/5 before:opacity-50",
-            className
+            className,
           )}
         >
           {/* Close button overlay */}
@@ -415,7 +415,7 @@ export const NavbarLogo = () => {
         <Avatar className="ring-2 ring-blue-500/30 group-hover:ring-blue-400/50 transition-all duration-300">
           <AvatarImage
             src={
-              "https://res.cloudinary.com/rdisexc23ed/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1719936876/Portfolio/about/avatar/nkp5hck2p22a4fds9g2j.jpg"
+              "https://res.cloudinary.com/rdisexc23ed/image/upload/v1769272525/profile_d4p0qs.jpg"
             }
             loading="lazy"
             alt="Rohit Patil"
@@ -430,7 +430,7 @@ export const NavbarLogo = () => {
           Rohit Patil
         </span>
         <div className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-          MERN Stack Developer
+          Full Stack Developer
         </div>
       </div>
     </a>

@@ -27,31 +27,34 @@ function About({ visibleSections }: { visibleSections: Set<string> }) {
             About Me
           </div>
           <div
-            className={`title text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight transition-all duration-700 delay-500 ${
+            className={`title text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight transition-all duration-700 delay-500 ${
               visibleSections.has("about")
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-5"
             }`}
           >
-            Full Stack{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Project Developer
+            Full Stack Developer &
+            <span className="bg-gradient-to-r pl-3 from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent animate-gradient animate-bounce-subtle">
+              GenAI Enthusiast
             </span>
           </div>
 
           <div
-            className={`description text-gray-300 text-xs md:text-sm lg:text-base leading-relaxed max-w-lg mb-6 font-light transition-all duration-700 delay-700 ${
+            className={`description text-gray-300 text-xs md:text-sm leading-relaxed max-w-lg mb-6 transition-all duration-700 delay-700 ${
               visibleSections.has("about")
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-5"
             }`}
           >
-            Over the past 3 years, I've immersed myself in web development
-            through hands-on project experience, specializing in building and
-            deploying large-scale applications. With a strong foundation in the
-            MERN stack (MongoDB, Express.js, React.js, Node.js), I've
-            successfully developed and launched multiple full-stack applications
-            from concept to deployment.
+            I am a Full Stack Developer with over 2 years of hands-on experience
+            building scalable web applications. My expertise lies in the MERN
+            stack (MongoDB, Express.js, React.js, Node.js) and Next.js, but I
+            don't just write code—I deploy it.
+            <br /> I specialize in bridging the gap between development and
+            operations, hosting my own projects on AWS EC2 using Docker and
+            Nginx to ensure performance and reliability. Recently, I have
+            expanded my focus to Generative AI, building intelligent
+            applications using RAG pipelines and Vector Databases.
           </div>
 
           <div

@@ -30,6 +30,7 @@ function NavbarDemo() {
     },
     { name: "Skills", link: "#skills" },
     { name: "Education", link: "#education" },
+    { name: "Experience", link: "#experience" },
     {
       name: "Projects",
       link: "#projects",
@@ -41,32 +42,9 @@ function NavbarDemo() {
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  // const [scrollProgress, setScrollProgress] = useState(0);
-
-  // // Scroll progress tracking for navbar
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const scrollTop = window.scrollY;
-  //     const docHeight =
-  //       document.documentElement.scrollHeight - window.innerHeight;
-  //     const scrollPercent = (scrollTop / docHeight) * 100;
-  //     setScrollProgress(scrollPercent);
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
 
   return (
     <>
-      {/* Scroll Progress Bar */}
-      {/* <div className="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-gray-800 to-gray-700 z-[110]">
-        <div
-          className="h-full bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 transition-all duration-300 ease-out"
-          style={{ width: `${scrollProgress}%` }}
-        />
-      </div> */}
-
       <Navbar className="fixed top-5 z-[100]">
         {/* Desktop Navigation */}
         <NavBody className="backdrop-blur-md bg-gray-950/90 border border-blue-500/30 rounded-2xl shadow-2xl shadow-blue-500/20 hover:shadow-blue-500/30 transition-all duration-500">
@@ -145,7 +123,7 @@ function NavbarDemo() {
                 <span className="font-medium">Contact Me</span>
               </a>
               <a
-                href="https://drive.google.com/file/d/1GLDpmNMcONF3amydwF0jA7hOX-RjiRD4/view?usp=drive_link"
+                href="/Rohit Patil - MERN GenAI.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-purple-300 hover:text-purple-400 transition-colors duration-200 py-2 px-4 rounded-lg hover:bg-purple-500/10"

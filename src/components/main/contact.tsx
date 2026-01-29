@@ -31,7 +31,7 @@ function Contact({ visibleSections }: { visibleSections: Set<string> }) {
             Get In Touch
           </div>
           <div
-            className={`title text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight transition-all duration-700 delay-200 ${
+            className={`title text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight transition-all duration-700 delay-200 ${
               visibleSections.has("contact")
                 ? "animate-slide-up opacity-100"
                 : "opacity-0 translate-y-5"
@@ -151,7 +151,7 @@ function Contact({ visibleSections }: { visibleSections: Set<string> }) {
                         Location
                       </h4>
                       <p className="text-xs text-gray-400">
-                        Available for remote work worldwide
+                        Solapur, India (Open to Relocate)
                       </p>
                     </div>
                   </div>
@@ -178,14 +178,14 @@ function Contact({ visibleSections }: { visibleSections: Set<string> }) {
                 {[
                   {
                     name: "LinkedIn",
-                    desc: "Professional",
+                    desc: "Let's Connect",
                     href: "https://www.linkedin.com/in/rohit-patil18/",
                     color: "blue",
                     delay: "0",
                   },
                   {
                     name: "GitHub",
-                    desc: "Code Portfolio",
+                    desc: "20+ Repositories",
                     href: "https://github.com/rohitp-18",
                     color: "gray",
                     delay: "100",
@@ -234,28 +234,28 @@ function Contact({ visibleSections }: { visibleSections: Set<string> }) {
             >
               <h3 className="text-lg md:text-xl font-semibold text-cyan-400 mb-4 flex items-center gap-2">
                 <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse"></div>
-                What I Can Help With
+                My Areas of Focus
               </h3>
               <div className="space-y-3">
                 {[
                   {
-                    title: "Custom Web Development",
-                    desc: "Full-stack applications tailored to your business needs",
+                    title: "Full Stack Engineering",
+                    desc: "Building scalable, production-ready web applications using the MERN stack and Next.js.",
                     color: "blue",
                   },
                   {
-                    title: "Technical Consultation",
-                    desc: "Architecture planning and technology stack recommendations",
+                    title: "Generative AI Solutions",
+                    desc: "Developing intelligent systems with RAG pipelines, LangChain, and Vector Databases.",
                     color: "purple",
                   },
                   {
-                    title: "Code Review & Optimization",
-                    desc: "Performance improvements and best practices implementation",
+                    title: "Cloud & DevOps",
+                    desc: "Deploying containerized applications using Docker, Nginx, and AWS EC2.",
                     color: "cyan",
                   },
                   {
-                    title: "Mentoring & Training",
-                    desc: "MERN stack guidance for individuals and teams",
+                    title: "System Architecture",
+                    desc: "Designing robust REST APIs, secure authentication, and optimized database schemas.",
                     color: "green",
                   },
                 ].map((service, index) => (
@@ -297,7 +297,7 @@ function Contact({ visibleSections }: { visibleSections: Set<string> }) {
               </HoverBorderGradient>
             </a>
             <a
-              href="https://drive.google.com/file/d/1GLDpmNMcONF3amydwF0jA7hOX-RjiRD4/view?usp=drive_link"
+              href="/Rohit Patil - MERN GenAI.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block flex-1 sm:flex-none animate-bounce-gentle delay-200"
@@ -383,8 +383,8 @@ function Contact({ visibleSections }: { visibleSections: Set<string> }) {
                     Subject
                   </label>
                   <select
-                    value={formData.subject}
-                    onChange={(e) => updateField("subject", e.target.value)}
+                    value={formData.type}
+                    onChange={(e) => updateField("type", e.target.value)}
                     required
                     className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/60 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300 group-hover:border-gray-500/70 focus:scale-[1.02] appearance-none cursor-pointer"
                     style={{

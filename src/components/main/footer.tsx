@@ -116,13 +116,13 @@ function Footer({ scrollProgress }: { scrollProgress: any }) {
                   Rohit Patil
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-400 mt-1">
-                  MERN Stack Developer
+                  Full Stack & GenAI Engineer
                 </p>
               </div>
               <p className="text-gray-300 text-xs sm:text-sm leading-relaxed max-w-md mb-4">
-                Passionate full-stack developer specializing in building modern,
-                scalable web applications. Transforming ideas into digital
-                solutions with cutting-edge technologies.
+                Building scalable web architectures and intelligent AI systems.
+                Focused on the MERN Stack, Next.js, and DevOps to deliver
+                production-ready solutions
               </p>
               <div className="flex items-center gap-3 sm:gap-4">
                 <a
@@ -253,36 +253,19 @@ function Footer({ scrollProgress }: { scrollProgress: any }) {
                   Services
                 </h4>
                 <ul className="space-y-1.5 sm:space-y-2">
-                  <li>
-                    <span className="text-gray-400 text-xs sm:text-sm">
-                      Web Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="text-gray-400 text-xs sm:text-sm">
-                      Frontend Design
-                    </span>
-                  </li>
-                  <li>
-                    <span className="text-gray-400 text-xs sm:text-sm">
-                      Backend APIs
-                    </span>
-                  </li>
-                  <li>
-                    <span className="text-gray-400 text-xs sm:text-sm">
-                      Database Design
-                    </span>
-                  </li>
-                  <li>
-                    <span className="text-gray-400 text-xs sm:text-sm">
-                      Performance Optimization
-                    </span>
-                  </li>
-                  <li>
-                    <span className="text-gray-400 text-xs sm:text-sm">
-                      Code Review
-                    </span>
-                  </li>
+                  {[
+                    "Full Stack Developer",
+                    "Generative AI / RAG",
+                    "Cloud Infrastructure (AWS)",
+                    "Backend Architecture",
+                    "Database Design",
+                  ].map((service) => (
+                    <li key={service}>
+                      <span className="text-gray-400 text-xs sm:text-sm">
+                        {service}
+                      </span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -295,16 +278,14 @@ function Footer({ scrollProgress }: { scrollProgress: any }) {
             </h4>
             <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
               {[
-                "React.js",
                 "Next.js",
-                "Node.js",
-                "MongoDB",
-                "Express.js",
                 "TypeScript",
-                "Tailwind CSS",
-                "JavaScript",
-                "Pinecone",
-                "Git",
+                "Python",
+                "LangChain",
+                "Docker",
+                "AWS",
+                "MongoDB",
+                "FastAPI",
               ].map((tech) => (
                 <span
                   key={tech}
@@ -320,9 +301,9 @@ function Footer({ scrollProgress }: { scrollProgress: any }) {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
             <div className="text-center">
               <div className="text-base sm:text-lg font-bold text-blue-400">
-                3+
+                2+
               </div>
-              <div className="text-xs text-gray-400">Years Experience</div>
+              <div className="text-xs text-gray-400">Years Development</div>
             </div>
             <div className="text-center">
               <div className="text-base sm:text-lg font-bold text-purple-400">
@@ -332,31 +313,29 @@ function Footer({ scrollProgress }: { scrollProgress: any }) {
             </div>
             <div className="text-center">
               <div className="text-base sm:text-lg font-bold text-cyan-400">
-                5+
+                15+
               </div>
               <div className="text-xs text-gray-400">Technologies</div>
             </div>
             <div className="text-center">
               <div className="text-base sm:text-lg font-bold text-orange-400">
-                24/7
+                Available
               </div>
-              <div className="text-xs text-gray-400">Support Available</div>
+              <div className="text-xs text-gray-400">Open to Opportunities</div>
             </div>
           </div>
 
           {/* Bottom Footer */}
           <div className="border-t border-gray-800/50 pt-4 sm:pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-gray-400 text-xs sm:text-sm text-center md:text-left">
-              <p>&copy; 2025 Rohit Patil. All rights reserved.</p>
+              <p>&copy; 2026 Rohit Patil. All rights reserved.</p>
             </div>
 
             <div className="flex flex-col items-center gap-3 md:gap-4 w-full md:w-auto">
               <div className="flex items-center gap-2 sm:gap-4 text-xs text-gray-400 text-center">
                 <span>Made with ❤️ in India</span>
                 <span className="hidden sm:inline">•</span>
-                <span className="hidden sm:inline">
-                  Available for Remote Work
-                </span>
+                <span className="hidden sm:inline">Open to Relocate</span>
               </div>
 
               <div className="flex items-center gap-3 sm:gap-4">
