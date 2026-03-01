@@ -249,11 +249,6 @@ function Contact({ visibleSections }: { visibleSections: Set<string> }) {
                     color: "purple",
                   },
                   {
-                    title: "Cloud & DevOps",
-                    desc: "Deploying containerized applications using Docker, Nginx, and AWS EC2.",
-                    color: "cyan",
-                  },
-                  {
                     title: "System Architecture",
                     desc: "Designing robust REST APIs, secure authentication, and optimized database schemas.",
                     color: "green",
@@ -297,7 +292,7 @@ function Contact({ visibleSections }: { visibleSections: Set<string> }) {
               </HoverBorderGradient>
             </a>
             <a
-              href="/Rohit Patil - MERN GenAI.pdf"
+              href="/Rohit Patil - Full Stack developer.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block flex-1 sm:flex-none animate-bounce-gentle delay-200"

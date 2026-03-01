@@ -92,10 +92,7 @@ function Home({ visibleSections }: { visibleSections: Set<string> }) {
             }`}
           >
             <div className="text-base md:text-lg lg:text-xl xl:text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent min-h-[1.5rem] sm:min-h-[2rem] md:min-h-[2.5rem] lg:min-h-[3rem] flex items-center justify-center lg:justify-start leading-tight animate-typing">
-              {displayText}
-              <span className="text-blue-400 animate-pulse ml-1 animate-blink">
-                |
-              </span>
+              Full Stack Developer | MERN & AI-Integrated Applications
             </div>
           </div>
           <div
@@ -105,11 +102,11 @@ function Home({ visibleSections }: { visibleSections: Set<string> }) {
                 : "opacity-0 translate-y-4"
             }`}
           >
-            I build scalable, high-performance web applications and intelligent
-            AI solutions. Specializing in the MERN Stack, Next.js, and DevOps, I
-            bridge the gap between complex backend architecture and seamless
-            user experiences. Beyond coding, I deploy production-ready systems
-            using AWS, Docker, and Nginx.
+            I build modern full-stack web applications with real-time features
+            and AI-integrated systems. I focus on clean backend architecture,
+            efficient APIs, and responsive user interfaces. I have hands-on
+            experience deploying applications using AWS and Docker, and I enjoy
+            solving real-world problems through practical engineering.
           </div>
           <div
             className={`flex flex-col sm:flex-row w-full gap-3 lg:gap-4 justify-center lg:justify-start items-center mt-6 lg:mt-8 transition-all duration-700 delay-1000 ${
@@ -119,7 +116,7 @@ function Home({ visibleSections }: { visibleSections: Set<string> }) {
             }`}
           >
             <a
-              href="/Rohit Patil - MERN GenAI.pdf"
+              href="/Rohit Patil - Full Stack developer.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block transform hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 w-full sm:w-auto animate-slide-up hover:animate-pulse-glow"

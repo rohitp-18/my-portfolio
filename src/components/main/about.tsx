@@ -46,15 +46,23 @@ function About({ visibleSections }: { visibleSections: Set<string> }) {
                 : "opacity-0 translate-y-5"
             }`}
           >
-            I am a Full Stack Developer with over 2 years of hands-on experience
-            building scalable web applications. My expertise lies in the MERN
-            stack (MongoDB, Express.js, React.js, Node.js) and Next.js, but I
-            don't just write code—I deploy it.
-            <br /> I specialize in bridging the gap between development and
-            operations, hosting my own projects on AWS EC2 using Docker and
-            Nginx to ensure performance and reliability. Recently, I have
-            expanded my focus to Generative AI, building intelligent
-            applications using RAG pipelines and Vector Databases.
+            I am a B.Sc Computer Science student and Full Stack Developer with
+            practical experience building web applications using the MERN stack
+            and Next.js. Through internships and personal projects, I have
+            worked on backend APIs, authentication systems, real-time features,
+            and database design.
+            <br />
+            Beyond development, I have deployed applications on AWS EC2 using
+            Docker and Nginx, gaining hands-on experience with server setup and
+            production deployment.
+            <br />
+            Recently, I have explored Generative AI integration by building
+            applications using Retrieval-Augmented Generation (RAG) architecture
+            and vector databases, focusing on practical implementation within
+            full-stack systems.
+            <br />I am currently seeking an entry-level role where I can
+            contribute to real-world projects and continue growing as a
+            backend-focused full stack engineer.
           </div>
 
           <div
@@ -118,12 +126,6 @@ function About({ visibleSections }: { visibleSections: Set<string> }) {
                   description:
                     "Creating responsive applications using React, Next.js, and modern frameworks",
                   color: "purple",
-                },
-                {
-                  title: "Project Architecture",
-                  description:
-                    "Designing and implementing scalable application structures and APIs",
-                  color: "cyan",
                 },
               ].map((item, index) => (
                 <div

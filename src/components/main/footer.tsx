@@ -120,9 +120,10 @@ function Footer({ scrollProgress }: { scrollProgress: any }) {
                 </p>
               </div>
               <p className="text-gray-300 text-xs sm:text-sm leading-relaxed max-w-md mb-4">
-                Building scalable web architectures and intelligent AI systems.
-                Focused on the MERN Stack, Next.js, and DevOps to deliver
-                production-ready solutions
+                Building full-stack web applications and AI-integrated systems
+                using the MERN stack and Next.js. Experienced in deploying
+                applications with Docker and AWS, with a focus on clean backend
+                architecture and efficient APIs.
               </p>
               <div className="flex items-center gap-3 sm:gap-4">
                 <a
@@ -256,7 +257,6 @@ function Footer({ scrollProgress }: { scrollProgress: any }) {
                   {[
                     "Full Stack Developer",
                     "Generative AI / RAG",
-                    "Cloud Infrastructure (AWS)",
                     "Backend Architecture",
                     "Database Design",
                   ].map((service) => (
@@ -282,10 +282,8 @@ function Footer({ scrollProgress }: { scrollProgress: any }) {
                 "TypeScript",
                 "Python",
                 "LangChain",
-                "Docker",
                 "AWS",
                 "MongoDB",
-                "FastAPI",
               ].map((tech) => (
                 <span
                   key={tech}
@@ -301,9 +299,9 @@ function Footer({ scrollProgress }: { scrollProgress: any }) {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
             <div className="text-center">
               <div className="text-base sm:text-lg font-bold text-blue-400">
-                2+
+                2
               </div>
-              <div className="text-xs text-gray-400">Years Development</div>
+              <div className="text-xs text-gray-400">Internships</div>
             </div>
             <div className="text-center">
               <div className="text-base sm:text-lg font-bold text-purple-400">

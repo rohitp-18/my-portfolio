@@ -29,8 +29,8 @@ function NavbarDemo() {
       link: "#about",
     },
     { name: "Skills", link: "#skills" },
-    { name: "Education", link: "#education" },
     { name: "Experience", link: "#experience" },
+    { name: "Education", link: "#education" },
     {
       name: "Projects",
       link: "#projects",
@@ -123,7 +123,7 @@ function NavbarDemo() {
                 <span className="font-medium">Contact Me</span>
               </a>
               <a
-                href="/Rohit Patil - MERN GenAI.pdf"
+                href="/Rohit Patil - Full Stack developer.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-purple-300 hover:text-purple-400 transition-colors duration-200 py-2 px-4 rounded-lg hover:bg-purple-500/10"

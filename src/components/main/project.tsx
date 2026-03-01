@@ -58,12 +58,12 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                 </h3>
                 <div className="grid grid-cols-2 md:grid-cols-3 overflow-hidden gap-3 stagger-children min-w-0">
                   {[
-                    { name: "Web Applications", count: "7+" },
+                    { name: "Web Applications", count: "9+" },
                     { name: "E-Commerce Sites", count: "1+" },
                     { name: "Gen AI Apps", count: "1+" },
                     { name: "Dashboard UIs", count: "2+" },
                     { name: "API Development", count: "5+" },
-                    { name: "Cloud Deployment", count: "5" },
+                    { name: "Cloud Deployment", count: "4+" },
                   ].map((category, index) => (
                     <div
                       key={index}
@@ -191,7 +191,7 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                             }`}
                           >
                             <div className="text-2xl font-bold text-white mb-1 animate-bounce-slow">
-                              10+
+                              9+
                             </div>
                             <div className="text-sm text-gray-400">
                               Projects
@@ -295,8 +295,8 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                         : "opacity-0 translate-y-4"
                     }`}
                   >
-                    <div className="text-lg font-bold text-purple-400">2</div>
-                    <div className="text-xs text-gray-300">Internships</div>
+                    <div className="text-lg font-bold text-purple-400">9+</div>
+                    <div className="text-xs text-gray-300">Projects</div>
                   </div>
                 </div>
               </div>

@@ -120,28 +120,23 @@ function Skills({ visibleSections }: { visibleSections: Set<string> }) {
                 Backend & Database
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                {[
-                  "Node.js",
-                  "Express.js",
-                  "MongoDB",
-                  "FastAPI",
-                  "Socket.io",
-                  "Mongoose",
-                ].map((skill, index) => (
-                  <div
-                    key={skill}
-                    className={`bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/20 rounded-lg px-3 py-2 hover:border-purple-400/40 hover:scale-105 transition-all duration-500 cursor-pointer group ${
-                      visibleSections.has("skills")
-                        ? "scale-100 opacity-100"
-                        : "scale-90 opacity-0"
-                    }`}
-                    style={{ transitionDelay: `${1400 + index * 100}ms` }}
-                  >
-                    <div className="text-sm text-gray-300 font-medium group-hover:text-white transition-colors duration-300">
-                      {skill}
+                {["Node.js", "Express.js", "MongoDB", "Socket.io"].map(
+                  (skill, index) => (
+                    <div
+                      key={skill}
+                      className={`bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/20 rounded-lg px-3 py-2 hover:border-purple-400/40 hover:scale-105 transition-all duration-500 cursor-pointer group ${
+                        visibleSections.has("skills")
+                          ? "scale-100 opacity-100"
+                          : "scale-90 opacity-0"
+                      }`}
+                      style={{ transitionDelay: `${1400 + index * 100}ms` }}
+                    >
+                      <div className="text-sm text-gray-300 font-medium group-hover:text-white transition-colors duration-300">
+                        {skill}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ),
+                )}
               </div>
             </div>
 
@@ -207,28 +202,23 @@ function Skills({ visibleSections }: { visibleSections: Set<string> }) {
                 DevOps & Tools
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                {[
-                  "Docker",
-                  "AWS EC2",
-                  "Nginx",
-                  "Git/GitHub",
-                  "Postman",
-                  "Linux",
-                ].map((tool, index) => (
-                  <div
-                    key={tool}
-                    className={`bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-lg px-3 py-2 text-center hover:border-cyan-400/40 hover:scale-105 transition-all duration-500 cursor-pointer group ${
-                      visibleSections.has("skills")
-                        ? "scale-100 opacity-100 rotate-0"
-                        : "scale-90 opacity-0 rotate-3"
-                    }`}
-                    style={{ transitionDelay: `${2800 + index * 100}ms` }}
-                  >
-                    <span className="text-sm text-gray-300 font-medium group-hover:text-white transition-colors duration-300">
-                      {tool}
-                    </span>
-                  </div>
-                ))}
+                {["AWS EC2", "Nginx", "Git/GitHub", "Postman", "Linux"].map(
+                  (tool, index) => (
+                    <div
+                      key={tool}
+                      className={`bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-lg px-3 py-2 text-center hover:border-cyan-400/40 hover:scale-105 transition-all duration-500 cursor-pointer group ${
+                        visibleSections.has("skills")
+                          ? "scale-100 opacity-100 rotate-0"
+                          : "scale-90 opacity-0 rotate-3"
+                      }`}
+                      style={{ transitionDelay: `${2800 + index * 100}ms` }}
+                    >
+                      <span className="text-sm text-gray-300 font-medium group-hover:text-white transition-colors duration-300">
+                        {tool}
+                      </span>
+                    </div>
+                  ),
+                )}
               </div>
             </div>
           </div>
@@ -322,24 +312,6 @@ function Skills({ visibleSections }: { visibleSections: Set<string> }) {
                   <br />
                 </div>
                 <div className="pl-6 text-yellow-300">],</div>
-
-                <div className="pl-6">
-                  <span className="text-blue-300">infrastructure:</span>
-                  <span className="text-yellow-300 ml-2">{`{`}</span>
-                </div>
-                <div className="pl-12">
-                  <span className="text-blue-300">cloud:</span>
-                  <span className="text-green-300 ml-2">"AWS EC2"</span>,
-                </div>
-                <div className="pl-12">
-                  <span className="text-blue-300">container:</span>
-                  <span className="text-green-300 ml-2">"Docker"</span>,
-                </div>
-                <div className="pl-12">
-                  <span className="text-blue-300">server:</span>
-                  <span className="text-green-300 ml-2">"Nginx"</span>
-                </div>
-                <div className="pl-6 text-yellow-300">{`}`},</div>
 
                 <div className="pl-6">
                   <span className="text-blue-300">hard_worker:</span>
