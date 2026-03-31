@@ -309,7 +309,7 @@ This project is licensed under the ISC License - see the [LICENSE](LICENSE) file
 
 **Rohit Patil** - Full Stack Developer
 
-- **Portfolio**: [Your Portfolio URL]
+- **Portfolio**: [https://rohitp.tech] (https://rohitp.tech)
 - **Email**: rohitpatil18@hotmail.com
 - **LinkedIn**: [linkedin.com/in/rohit-patil18](https://www.linkedin.com/in/rohit-patil18/)
 - **GitHub**: [github.com/rohitp-18](https://github.com/rohitp-18)
