@@ -328,7 +328,7 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                   liveColor: "text-cyan-400 hover:text-cyan-300",
                   techBg: "bg-cyan-500/20",
                   techText: "text-cyan-300",
-                  liveUrl: "https://www.social.rohitp.tech/",
+                  liveUrl: "https://social.rohitp.tech/",
                   githubUrl: "https://github.com/rohitp-18/social-media",
                 },
                 {
@@ -344,7 +344,7 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                   liveColor: "text-blue-400 hover:text-blue-300",
                   techBg: "bg-blue-500/20",
                   techText: "text-blue-300",
-                  liveUrl: "https://www.store.rohitp.tech/",
+                  liveUrl: "https://store.rohitp.tech/",
                   githubUrl: "https://github.com/rohitp-18/e-commerce",
                 },
                 {
@@ -366,7 +366,7 @@ function Project({ visibleSections }: { visibleSections: Set<string> }) {
                   liveColor: "text-purple-400 hover:text-purple-300",
                   techBg: "bg-purple-500/20",
                   techText: "text-purple-300",
-                  liveUrl: "https://www.docs.rohitp.tech/",
+                  liveUrl: "https://docs.rohitp.tech/",
                   githubUrl: "https://github.com/rohitp-18/multi-doc-rag",
                 },
                 {

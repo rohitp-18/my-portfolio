@@ -10,7 +10,6 @@ import About from "@/components/main/about";
 import Skills from "@/components/main/skills";
 import Educations from "@/components/main/educations";
 import Project from "@/components/main/project";
-import Experience from "@/components/main/experience";
 
 function Page() {
   const [visibleSections, setVisibleSections] = useState<Set<string>>(
@@ -223,8 +222,6 @@ function Page() {
         <Skills visibleSections={visibleSections} />
 
         <Educations visibleSections={visibleSections} />
-
-        <Experience visibleSections={visibleSections} />
 
         <Project visibleSections={visibleSections} />
 

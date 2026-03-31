@@ -1,0 +1,33 @@
+# .dockerignore
+
+# Dependency directories
+node_modules
+npm-debug.log
+
+# Next.js build output
+.next
+build
+dist
+out
+
+# Version control
+.git
+.gitignore
+
+# Environment variables (CRITICAL: Do not burn secrets into the image)
+.env
+.env.local
+.env.production
+.env.development
+
+# Docker config files (The container doesn't need to know how it was built)
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

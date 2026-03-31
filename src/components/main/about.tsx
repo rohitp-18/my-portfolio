@@ -48,9 +48,9 @@ function About({ visibleSections }: { visibleSections: Set<string> }) {
           >
             I am a B.Sc Computer Science student and Full Stack Developer with
             practical experience building web applications using the MERN stack
-            and Next.js. Through internships and personal projects, I have
-            worked on backend APIs, authentication systems, real-time features,
-            and database design.
+            and Next.js. Through personal projects, I have worked on backend
+            APIs, authentication systems, real-time features, and database
+            design.
             <br />
             Beyond development, I have deployed applications on AWS EC2 using
             Docker and Nginx, gaining hands-on experience with server setup and

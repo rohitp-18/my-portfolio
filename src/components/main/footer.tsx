@@ -299,9 +299,9 @@ function Footer({ scrollProgress }: { scrollProgress: any }) {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
             <div className="text-center">
               <div className="text-base sm:text-lg font-bold text-blue-400">
-                2
+                1+
               </div>
-              <div className="text-xs text-gray-400">Internships</div>
+              <div className="text-xs text-gray-400">RAG System</div>
             </div>
             <div className="text-center">
               <div className="text-base sm:text-lg font-bold text-purple-400">

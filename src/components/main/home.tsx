@@ -1,54 +1,49 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import React from "react";
 import { IconBrandWhatsapp } from "@tabler/icons-react";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
 import Image from "next/image";
-import photo from "../../assets/1717652407586.png";
+const photo = require("../../assets/1717652407586.png");
 
 function Home({ visibleSections }: { visibleSections: Set<string> }) {
-  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
-  const [displayText, setDisplayText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
+  // const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  // const [displayText, setDisplayText] = useState("");
+  // const [isDeleting, setIsDeleting] = useState(false);
 
-  const roles = [
-    "a MERN Stack Developer",
-    "a Full Stack Website Developer",
-    "a React.js Developer",
-    "a Node.js Developer",
-    "a Next.js Developer",
-    "an AI Solutions Developer",
-    "Full Stack Engineer & GenAI Enthusiast",
-  ];
+  // const roles = [
+  //   "a MERN Stack Developer",
+  //   "a Full Stack Website Developer",
+  //   "MERN & AI-Integrated Applications",
+  // ];
 
-  useEffect(() => {
-    const currentRole = roles[currentRoleIndex];
-    const typeSpeed = isDeleting ? 50 : 100;
-    const deleteSpeed = 30;
+  // useEffect(() => {
+  //   const currentRole = roles[currentRoleIndex];
+  //   const typeSpeed = isDeleting ? 50 : 100;
+  //   const deleteSpeed = 30;
 
-    const timer = setTimeout(
-      () => {
-        if (!isDeleting && displayText !== currentRole) {
-          // Typing
-          setDisplayText(currentRole.substring(0, displayText.length + 1));
-        } else if (isDeleting && displayText !== "") {
-          // Deleting
-          setDisplayText(currentRole.substring(0, displayText.length - 1));
-        } else if (!isDeleting && displayText === currentRole) {
-          // Pause before deleting
-          setTimeout(() => setIsDeleting(true), 2000);
-        } else if (isDeleting && displayText === "") {
-          // Move to next role
-          setIsDeleting(false);
-          setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
-        }
-      },
-      isDeleting ? deleteSpeed : typeSpeed,
-    );
+  //   const timer = setTimeout(
+  //     () => {
+  //       if (!isDeleting && displayText !== currentRole) {
+  //         // Typing
+  //         setDisplayText(currentRole.substring(0, displayText.length + 1));
+  //       } else if (isDeleting && displayText !== "") {
+  //         // Deleting
+  //         setDisplayText(currentRole.substring(0, displayText.length - 1));
+  //       } else if (!isDeleting && displayText === currentRole) {
+  //         // Pause before deleting
+  //         setTimeout(() => setIsDeleting(true), 2000);
+  //       } else if (isDeleting && displayText === "") {
+  //         // Move to next role
+  //         setIsDeleting(false);
+  //         setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
+  //       }
+  //     },
+  //     isDeleting ? deleteSpeed : typeSpeed,
+  //   );
 
-    return () => clearTimeout(timer);
-  }, [displayText, isDeleting, currentRoleIndex, roles]);
+  //   return () => clearTimeout(timer);
+  // }, [displayText, isDeleting, currentRoleIndex, roles]);
   return (
     <section
       id="home"
@@ -159,6 +154,7 @@ function Home({ visibleSections }: { visibleSections: Set<string> }) {
             {/* 3. Your Transparent Photo */}
             {/* Adjust 'bottom-0' or 'scale' to position your face perfectly */}
             <Image
+              priority={false}
               src={photo}
               alt="Rohit Patil"
               className="relative z-10 w-[90%] h-[90%] object-cover object-bottom hover:scale-105 transition-transform duration-500"
